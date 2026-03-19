@@ -1,15 +1,15 @@
  {
   "workbench.startupEditor": "newUntitledFile",
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "editor.lineHeight": 1.8,
-  "javascript.suggest.autoImports": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
+  "js/ts.suggest.autoImports": true,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
   "editor.rulers": [
     80,
     120
   ],
   "extensions.ignoreRecommendations": true,
-  "typescript.tsserver.log": "off",
+  "js/ts.tsserver.log": "off",
   "editor.stickyScroll.enabled": false,
   "workbench.tree.enableStickyScroll": false,
   "files.associations": {
@@ -45,7 +45,6 @@
   "editor.parameterHints.enabled":false,
   "editor.renderLineHighlight": "gutter",
   "cSpell.language": "en,pt",
-  "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.suggestSelection": "first",
   "explorer.confirmDelete": false,
   "gitlens.codeLens.recentChange.enabled": false,
@@ -53,8 +52,7 @@
   "[prisma]": {
     "editor.formatOnSave": true
   },
-  "typescript.suggest.autoImports": true,
-  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "js/ts.preferences.preferTypeOnlyAutoImports": true,
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
@@ -241,12 +239,6 @@
   "editor.multiCursorLimit": 50000,
   "files.autoSave": "afterDelay",
   "editor.wordWrap": "on",
-  "editor.inlayHints.enabled": "off"
+  "editor.inlayHints.enabled": "off",
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
 }
-
-/*
-{
-    "workbench.colorTheme": "Min Dark",
-    "workbench.iconTheme": "symbols"
-}
-*/
