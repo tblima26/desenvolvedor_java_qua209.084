@@ -43,39 +43,30 @@ public class App {
             switch (options) {
                 case 1:
                     validMovie = true;
-                    answer = "Ótima escolha! Bom filme";
                     break;
                 case 2:
                     validMovie = (age >= 12) ? true : false;
-                    answer = (validMovie == true) ? "Ótima escolha! Bom filme"
-                            : "Idade não permitida! Escolher outro filme.";
                     break;
                 case 3:
                     validMovie = (age >= 14) ? true : false;
-                    answer = (validMovie == true) ? "Ótima escolha! Bom filme"
-                            : "Idade não permitida! Escolher outro filme.";
-
                     break;
                 case 4:
-                    validMovie = (age >= 16) ? true : false;
-                    answer = (validMovie == true) ? "Ótima escolha! Bom filme"
-                            : "Idade não permitida! Escolher outro filme.";
-
+                    validMovie = age >= 16;
                     break;
                 case 5:
-                    validMovie = (age >= 18) ? true : false;
-                    answer = (validMovie == true) ? "Ótima escolha! Bom filme"
-                            : "Idade não permitida! Escolher outro filme.";
+                    validMovie = age >= 18;
                     break;
                 default:
-                    answer = "Escolha um valor referente ao filme desejado.";
+                    validMovie = false;
                     break;
-            }
+            } 
+            answer = (validMovie == true) ? "Ótima escolha! Bom filme!"
+                    : "Idade não permitida! Escolher outro filme.";
             if (!validMovie)
                 System.out.println(answer);
         } while (validMovie == false);
-        System.out.println(name + ", é uma boa escolha!");
         System.out.println(answer);
+        System.out.println(name + ", Você está liberado!");
         sc.close();
     }
 }
