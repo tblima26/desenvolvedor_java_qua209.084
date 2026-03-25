@@ -7,10 +7,8 @@ public class App {
          * Recrie o programa da Calculadora feito no dia 18/03, mas desta vez,
          * acrescentando a opção de encerrar o programa quando o usario quiser.
          */
-
         Scanner scanner = new Scanner(System.in);
         int options;
-
         do {
             System.out.println("\n=== CALCULADORA ===");
             System.out.println("1 - Somar");
@@ -21,11 +19,9 @@ public class App {
             System.out.print("Escolha uma opção: ");
             options = scanner.nextInt();
             double num1, num2, result = 0;
-
             if (options >= 1 && options <= 4) {
                 System.out.print("Digite o primeiro número: ");
                 num1 = scanner.nextDouble();
-
                 System.out.print("Digite o segundo número: ");
                 num2 = scanner.nextDouble();
                 switch (options) {
@@ -47,14 +43,11 @@ public class App {
                         }
                         break;
                 }
-
                 System.out.println("Resultado: " + result);
             } else if (options != 0) {
                 System.out.println("Opção inválida!");
             }
-
         } while (options != 0);
-
         System.out.println("Programa encerrado.");
         scanner.close();
     }
