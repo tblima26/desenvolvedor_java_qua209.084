@@ -27,13 +27,11 @@ public class App {
         usuario.email = sc.nextLine();
         System.out.println("Telefone: ");
         usuario.phone = sc.nextLine();
-        System.out.println("Idade: ");
-        usuario.age = sc.nextInt();
-
+    
+        PessoaFisica novaPessoa =  new PessoaFisica(usuario.name, usuario.cpf);
+        System.out.println(novaPessoa.name+" "+novaPessoa.cpf );
         System.out.println(usuario.apresentar());
         System.out.println(empresa.recepcionar(usuario.name));
-
-
         sc.close();
     }
 }
