@@ -2,6 +2,9 @@ package com.atividade.app;
 
 import java.util.Scanner;
 
+import com.atividade.models.Caminhao;
+import com.atividade.models.Carro;
+import com.atividade.models.Onibus;
 import com.atividade.models.Veiculo;
 
 public class App {
@@ -29,22 +32,31 @@ public class App {
         int options = sc.nextInt();
         switch (options) {
             case 1:
-                
+                Veiculo moto = new Veiculo("CG", "200", "PRETA", "2026", "ABC1415");
+                System.out.println("Moto: " + moto.getFabricante() + "\nModelo: " + moto.getModelo());
                 break;
             case 2:
-
+                Carro carro = new Carro("Fiat", "Uno", "Branco", "2022", "ABC1D23", true);
+                System.out.println("Carro: " + carro.getFabricante());
+                System.out.println("Modelo: " + carro.getModelo());
+                System.out.println(carro.getBagageiro() ? "Tem bagageiro" : "Não tem bagageiro");
                 break;
             case 3:
-
+                Onibus onibus = new Onibus("Mercedes-Benz", "Marcopolo G7", "Prata", "2023", "BUS1A23", true);
+                System.out.println("Ônibus: " + onibus.getFabricante());
+                System.out.println("Modelo: " + onibus.getModelo());
+                System.out.println(onibus.getLeito() ? "É leito" : "Não é leito");
                 break;
             case 4:
-
+                Caminhao caminhao = new Caminhao("Volvo", "FH 540", "Azul", "2021", "TRK9B77", true);
+                System.out.println("Caminhão: " + caminhao.getFabricante());
+                System.out.println("Modelo: " + caminhao.getModelo());
+                System.out.println(caminhao.getCarroceria() ? "Tem leito" : "Não tem leito");
                 break;
             default:
                 System.out.println("Opção inválida! Tente novamente mais tarde.");
                 break;
         }
-
         sc.close();
     }
 }

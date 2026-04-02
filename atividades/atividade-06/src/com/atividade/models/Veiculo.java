@@ -1,8 +1,7 @@
 package com.atividade.models;
 
 public class Veiculo {
-  private String fabricante, modelo, cor, ano ,placa;
-
+  private String fabricante, modelo, cor, ano, placa;
 
   public Veiculo(String fabricante, String modelo, String cor, String ano, String placa) {
     setFabricante(fabricante);
@@ -11,7 +10,6 @@ public class Veiculo {
     setAno(ano);
     setPlaca(placa);
   }
- 
 
   public String getFabricante() {
     return this.fabricante;
