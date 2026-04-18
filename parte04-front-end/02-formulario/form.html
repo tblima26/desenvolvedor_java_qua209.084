@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="index.html">HOME PAGE</a>
+    <br /><br />
+    <h1>Formulario</h1>
+    <form action="">
+      <table>
+        <tr>
+          <td>
+            <label for="name">Nome</label>
+          </td>
+          <td>
+            <input id="name" name="name" type="text" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="age">Idade</label>
+          </td>
+          <td>
+            <input id="age" name="age" type="number" step="1" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="high">Altura</label>
+          </td>
+          <td>
+            <input id="high" name="high" type="number" step="0.01" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="date-born">Data de Nascimento</label>
+          </td>
+          <td>
+            <input id="date-born" name="date-born" type="date" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="gender">Genero</label>
+          </td>
+          <td>
+            <input id="gender" name="gender" type="radio" value="man" />
+            <span>Masculino</span><br />
+            <input id="gender" name="gender" type="radio" value="woman" />
+            <span>Feminino</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="graduation">Escolaridade</label>
+          </td>
+          <td>
+            <select name="graduation" id="graduation" place>
+              <option value="" selected disabled></option>
+              <option value="fundamental">Fundamental</option>
+              <option value="medium">Médio</option>
+              <option value="gradute">Graduação</option>
+              <option value="pos-graduate">Pos Graduação</option>
+              <option value="mester">Mestrado</option>
+              <option value="doctor">Doutorado</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="password">Senha</label></td>
+          <td><input type="password" id="password" name="password" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button type="submit">Cadasrar</button>
+            <button type="reset">Resetar</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
