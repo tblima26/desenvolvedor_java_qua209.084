@@ -9,8 +9,9 @@
   --color-white: #fff;
   --color-white-ice: #fefefe;
   --color-gray: #dddddd;
-  --color-blue: #3b82f6;
+  --color-gray-soft:#7a7a7a ;
   --color-dark-gray: #2a2a2a;
+  --color-blue: #3b82f6;
   --color-green: #26b862;
   --color-pink: #cc449a;
   --color-light-pink: #f9f4fa;
@@ -45,12 +46,20 @@ li a {
   color: var(--color-gray);
   font-size: x-large;
 }
+
 aside {
-  background-color: var(--color-gray);
-  width: 15rem;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  gap: 0.5rem;
+  background-color: var(--color-gray);
+  width: 15rem;
+  padding: 5rem 1.8rem;
+  gap: 10px;
+}
+/* Layout principal */
+.layout {
+  display: flex;
+  align-items: stretch;
 }
 
 /* Header */
@@ -122,8 +131,108 @@ aside {
 
 /* Menu lateral */
 .side-title {
+  width: fit-content;
   font-size: var(--font-size-m);
   background-color: var(--color-green);
   padding: 0.3rem;
   color: var(--color-white);
+  font-family: "Roboto";
+}
+.side-hashtag {
+  color: var(--color-gray-soft);
+  list-style: none;
+  margin-bottom: 0.2rem;
+}
+/* Perfis laterais*/
+.caster {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.caster img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.caster-info {
+  display: flex;
+  flex-direction: column;
+}
+.nick {
+  font-family: "Roboto";
+  color: var(--color-dark-gray);
+  font-weight: 500;
+}
+.tag {
+  font-family: "Roboto";
+  font-size: 0.8rem;
+  color: var(--color-gray-soft);
+}
+
+/* Perfis laterais*/
+.container-feed {
+  width: 100%;
+  padding: 5rem;
+}
+.feed {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+.card {
+  background: var(--color-white);
+  overflow: hidden;
+  transition: 0.3s ease;
+
+}
+.card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+/* imagem principal (live) */
+.cover {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+/* container de info */
+.card-info {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  gap: 0.6rem;
+}
+/* avatar */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* bloco de texto */
+.user {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+/* nickname */
+.nick {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-dark-gray);
+}
+/* hashtag */
+.user .tag {
+  font-size: 0.75rem;
+  font-family: "Roboto";
+  color: var(--color-gray-soft);
+}
+/* views */
+.views {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.8rem;
+  color: var(--color-dark-gray);
 }
