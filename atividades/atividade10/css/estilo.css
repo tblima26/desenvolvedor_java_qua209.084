@@ -1,0 +1,127 @@
+* {
+    margin: 0px auto;
+}
+
+.container {
+    margin: 5%;
+}
+
+@font-face {
+    font-family: Lobster;
+    src: url(../fonts/Lobster1.4.otf);
+}
+
+header, .youcast-now, nav {
+    height: 100px;
+}
+
+.youcast-now, nav, .nome-logo, .user-main img {
+    float: left;
+}
+
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    width: 100%;
+    color: #fff;
+    border-bottom: 7px solid;
+    border-image-source: linear-gradient(to right, #0f0, #f0f);
+    border-image-slice: 1;
+}
+
+.youcast-now {
+    width: 25%; 
+    background-color: #666; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.now {
+    background-color: #ff00ff;
+    padding: 0px 5px;
+    font-size: 25px;
+}
+
+h1 {
+    font-family: Lobster;
+    font-size: 90px;
+}
+
+nav {
+    width: 75%;
+    background-color: #000;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: -10px 0px 0px 0px;
+}
+
+ul li {
+    display: inline;
+    margin-right: 25px;
+    font-size: 30px;
+}
+
+.usuario {
+    width: 64px;
+    margin-bottom: -15px;
+}
+
+aside, main {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+aside {
+    width: 20%;
+    height: 100vh;
+    background-color: #ccc;
+    float: left;
+    padding: 20px;
+    margin-right: 100px;
+}
+
+.titulo-secao {
+    background-color: #0a0;
+    color: #fff;
+    padding: 5px;
+    font-size: 40px;
+}
+
+.trending-caster, .just-for-you {
+    margin: 20px 0px;
+}
+
+.trending-caster img, .just-for-you img {
+    float: left;
+    margin-right: 15px;
+    width: 38px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+article {
+    margin: 0px 10px 10px 10px;
+}
+
+.img-main {
+    width: 250px;
+    height: 300px;
+}
+
+.user-main {
+    margin: 10px 0px;
+}
+
+.user-main img {
+    margin-right: 10px;
+    width: 38px;
+}
