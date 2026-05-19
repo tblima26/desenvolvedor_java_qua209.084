@@ -9,4 +9,9 @@ public class FragmentsController {
   public String index() {
     return "index";
   }
+
+  @RequestMapping("/linkinPark")
+  public String link() {
+    return "link";
+  }
 }
