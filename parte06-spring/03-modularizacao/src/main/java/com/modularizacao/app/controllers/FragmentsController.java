@@ -5,13 +5,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class FragmentsController {
-  @RequestMapping("/")
-  public String index() {
-    return "index";
-  }
+    @RequestMapping("/")
+    public String index() {
+        return "index";
+    }
 
-  @RequestMapping("/linkinPark")
-  public String link() {
-    return "link";
-  }
+    @RequestMapping("/linkInPark")
+    public String link() {
+        return "link";
+    }
 }

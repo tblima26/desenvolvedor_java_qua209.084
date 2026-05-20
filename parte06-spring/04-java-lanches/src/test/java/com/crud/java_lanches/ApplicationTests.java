@@ -1,4 +1,4 @@
-package com.modularizacao.__modularizacao.app;
+package com.crud.java_lanches;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
