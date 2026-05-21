@@ -1,7 +1,5 @@
 package com.crud.java_lanches.models;
 
-import java.time.LocalDate;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,22 +13,14 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Cliente {
+public class Categoria {
   private static long serialVersionUID = 1L;
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
 
-  @Column(nullable = false)
-  private String name;
-  @Column(nullable = false, unique = true)
-  private String cpf;
-  @Column(nullable = false, unique = true)
-  private String email;
-  @Column(nullable = false, unique = true)
-  private String phone;
-  @Column(nullable = false)
-  private LocalDate bornDate;
+  @Column(unique = true, nullable = false)
+  private String category;
 
 }
