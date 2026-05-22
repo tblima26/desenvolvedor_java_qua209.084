@@ -1,10 +1,14 @@
 package com.crud.java_lanches.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -22,5 +26,9 @@ public class Categoria {
 
   @Column(unique = true, nullable = false)
   private String category;
+
+  @OneToMany(mappedBy = "Categoria")
+  private List<Produto> produtos =  new ArrayList<>();
+
 
 }

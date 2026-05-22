@@ -1,5 +1,7 @@
 package com.crud.java_lanches.models;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,27 +15,13 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Endereco {
+public class Pedido {
   private static long serialVersionUID = 1L;
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
-  
-  @Column(nullable = false)
-  private String cep;
-  @Column(nullable = false)
-  private String uf;
-  @Column(nullable = false)
-  private String city;
-  @Column(nullable = false)
-  private String adress;
-  @Column(nullable = false)
-  private String logradouro;
-  @Column(nullable = false)
-  private String number;
-  @Column(length = 255)
-  private String complement;
 
-  
+  @Column(nullable = false)
+  private LocalDateTime createdAt;
 }
