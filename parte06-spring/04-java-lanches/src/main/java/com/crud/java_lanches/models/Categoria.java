@@ -25,9 +25,9 @@ public class Categoria {
   private long id;
 
   @Column(unique = true, nullable = false)
-  private String category;
+  private String categoria;
 
-  @OneToMany(mappedBy = "Categoria")
+  @OneToMany(mappedBy = "categoria")
   private List<Produto> produtos =  new ArrayList<>();
 
 
