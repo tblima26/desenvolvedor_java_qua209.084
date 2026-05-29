@@ -13,7 +13,7 @@
       <hr />
       <form method="POST">
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <div class="col-12 col-lg-4 mb-3">
             <label for="nomeProduto" class="form-label">Nome do Produto</label>
             <input
               type="text"
@@ -26,28 +26,35 @@
           <div class="col-12 col-md-6 col-lg-4 mb-3">
             <label for="preco" class="form-label">Preço</label>
             <input
-            type="number"
-            class="form-control"
-            id="precoProduto"
-            name="precoProduto"
-            required
+              type="number"
+              class="form-control"
+              id="precoProduto"
+              name="precoProduto"
+              step="0.01"
+              required
             />
           </div>
           <div class="col-12 col-md-6 col-lg-4 mb-3">
-            <label for="categoria" class="form-label">Categoria</label>
-            <select class="form-select" name="categoria" id="categoria">
+            <label for="categoriaId" class="form-label">Categoria</label>
+            <select class="form-select" name="categoriaId" id="categoriaId">
               <option value="" disabled selected>
                 Selecione uma categoria.
               </option>
-              <option th:each="cat:${categorias}" th:value="${cat.codigoCategoria}" th:text="${cat.nomeCategoria}"></option>
+              <option
+                th:each="cat:${categorias}"
+                th:value="${cat.codigoCategoria}"
+                th:text="${cat.nomeCategoria}"
+              ></option>
             </select>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <div class="col-12 mb-3">
             <label for="descricao" class="form-label">Descrição</label>
             <textarea
               class="form-control"
               id="descricao"
               name="descricao"
+              rows="4"
+              maxlength="250"
             ></textarea>
           </div>
         </div>
