@@ -82,4 +82,10 @@ public class JavalanchesController {
         clienteRepository.save(cliente);
         return "cliente_sucesso";
     }
+
+    @GetMapping("/listarClientes")
+    public String listarCliente(Model model){
+        model.addAttribute("clientes", clienteRepository.findAll());
+        return "listar_clientes";
+    }
 }

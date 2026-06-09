@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{fragments/layout :: main-layout(~{::title}, ~{::main})}">
+
+<head>
+    <title>Javalanches - Clientes</title>
+</head>
+
+<body>
+    <main>
+        <h1>Clientes</h1>
+        <hr>
+        <div class="accordion" id="listarCliente">
+            <div class="accordion-item">
+                <div th:each="cliente: ${clientes}">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            th:data-bs-target="'#' + ${cliente.codigoCliente}" aria-expanded="true"
+                            th:aria-controls="${cliente.codigoCliente}">
+                            <span th:text="${cliente.nome}"></span>
+                        </button>
+                    </h2>
+                    <div th:id="${cliente.codigoCliente}" class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+
+                            <ul>
+                                <li><strong>Código:</strong> <span th:text="${cliente.codigoCliente}"></span></li>
+                                <li><strong>Nome:</strong> <span th:text="${cliente.nome}"></span></li>
+                                <li><strong>CPF:</strong> <span th:text="${cliente.cpf}"></span></li>
+                                <li><strong>Email:</strong> <span th:text="${cliente.email}"></span></li>
+                                <li><strong>Telefone:</strong> <span th:text="${cliente.telefone}"></span></li>
+                                <li><strong>Data de nascimento:</strong> <span
+                                        th:text="${cliente.dataNascimento}"></span>
+                                </li>
+                                <li><strong>Endereços:</strong> <span
+                                        th:text="${#lists.isEmpty(cliente.enderecos) ? 'Nenhum endereço cadastrado' : cliente.enderecos.size() + ' endereço(s)'}"></span>
+                                </li>
+                                <li><strong>Pedidos:</strong> <span
+                                        th:text="${#lists.isEmpty(cliente.pedidos) ? 'Nenhum pedido registrado' : cliente.pedidos.size() + ' pedido(s)'}"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
