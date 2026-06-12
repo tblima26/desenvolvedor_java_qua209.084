@@ -107,5 +107,20 @@ public class JavalanchesController {
         return "atualizar_categoria_sucesso";
     }
 
-    
+    @GetMapping("/atualizarProduto")
+    public String atualizarProduto(@RequestParam("codigoProduto") Long codigoProduto, Model model) {
+        Produto produto = produtoRepository.findById(codigoProduto).orElse(null);
+        model.addAttribute("produto", produto);
+        model.addAttribute("categorias", categoriaRepository.findAll());
+        return "atualizar_produto";
+    }
+
+    @PostMapping("/atualizarProduto")
+    public String atualizarProduto(@RequestParam("categoriaId") Long categoriaId, Produto produto) {
+        Categoria categoria = categoriaRepository.findById(categoriaId).orElse(null);
+        produto.setCategoria(categoria);
+        produtoRepository.save(produto);
+        return "atualizar_produto_sucesso";
+    }
+
 }

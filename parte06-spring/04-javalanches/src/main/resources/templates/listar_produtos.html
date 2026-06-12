@@ -37,7 +37,8 @@
                                         <p class="mb-1 fw-semibold">
                                             <span th:text="${produto.codigoProduto}"></span>
                                             <span> - </span>
-                                            <span th:text="${produto.nomeProduto}"></span>
+                                            <a class="text-decoration-none" th:text="${produto.nomeProduto}"
+                                                th:href="@{/atualizarProduto(codigoProduto=${produto.codigoProduto})}"></a>
                                             <span>: R$ </span>
                                             <span th:text="${produto.precoProduto}"></span>
                                         </p>
