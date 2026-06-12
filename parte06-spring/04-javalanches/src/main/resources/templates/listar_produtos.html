@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
-    th:replace="~{fragments/layout :: main-layout(~{::title}, ~{::main})}">
-
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: main-layout(~{::title}, ~{::main})}">
 <head>
     <title>Javalanches - Cardápio</title>
 </head>
-
 <body>
     <main>
         <h1>Cardápio</h1>
@@ -22,9 +19,7 @@
                             <strong>
                                 <span th:text="${categoria.codigoCategoria}"></span>
                                 .
-                                <a th:text="${categoria.nomeCategoria.toUpperCase()}"
-                                    class="text-white text-decoration-none"
-                                    th:href="@{/atualizarCategoria(codigoCategoria=${categoria.codigoCategoria})}"></a>
+                                <a class="text-white text-decoration-none" th:href="@{/atualizarCategoria(codigoCategoria=${categoria.codigoCategoria})}" th:text="${categoria.nomeCategoria.toUpperCase()}"></a>
                             </strong>
                         </div>
                         <div class="card-body">
@@ -37,14 +32,11 @@
                                         <p class="mb-1 fw-semibold">
                                             <span th:text="${produto.codigoProduto}"></span>
                                             <span> - </span>
-                                            <a class="text-decoration-none" th:text="${produto.nomeProduto}"
-                                                th:href="@{/atualizarProduto(codigoProduto=${produto.codigoProduto})}"></a>
+                                            <span th:text="${produto.nomeProduto}"></span>
                                             <span>: R$ </span>
                                             <span th:text="${produto.precoProduto}"></span>
                                         </p>
-                                        <p class="mb-0 text-muted"
-                                            th:text="${produto.descricaoProduto != null and !#strings.isEmpty(produto.descricaoProduto) ? produto.descricaoProduto : 'Produto sem descrição.'}">
-                                        </p>
+                                        <p class="mb-0 text-muted" th:text="${produto.descricaoProduto != null and !#strings.isEmpty(produto.descricaoProduto) ? produto.descricaoProduto : 'Produto sem descrição.'}"></p>
                                     </div>
                                 </div>
                             </div>
@@ -55,5 +47,4 @@
         </div>
     </main>
 </body>
-
 </html>
