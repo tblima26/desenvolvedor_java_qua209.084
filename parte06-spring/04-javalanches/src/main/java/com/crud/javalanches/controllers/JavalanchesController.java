@@ -169,4 +169,36 @@ public class JavalanchesController {
         categoriaRepository.save(categoria);
         return "atualizar_categoria_sucesso";
     }
+
+    @GetMapping("/atualizarProduto")
+    public String atualizarProduto(@RequestParam("codigoProduto") Long codigoProduto, Model model) {
+        Produto produto = produtoRepository.findById(codigoProduto).orElse(null);
+        model.addAttribute("produto", produto);
+        model.addAttribute("categorias", categoriaRepository.findAll());
+        return "atualizar_produto";
+    }
+
+    @PostMapping("/atualizarProduto")
+    public String atualizarProduto(Produto produto, @RequestParam("categoriaId") Long categoriaId) {
+        Categoria categoria = categoriaRepository.findById(categoriaId).orElse(null);
+        produto.setCategoria(categoria);
+        produtoRepository.save(produto);
+        return "atualizar_produto_sucesso";
+    }
+
+    @GetMapping("/deletarProduto")
+    public String deletarProduto(@RequestParam("codigoProduto") Long codigoProduto) {
+        produtoRepository.deleteById(codigoProduto);
+        return "redirect:/listarProdutos";
+    }
+
+    @GetMapping("/deletarCategoria")
+    public String deletarCategoria(@RequestParam("codigoCategoria") Long codigoCategoria) {
+        Categoria categoria = categoriaRepository.findById(codigoCategoria).orElse(null);
+        if (categoria != null) {
+            produtoRepository.deleteAll(categoria.getProdutos());
+            categoriaRepository.deleteById(codigoCategoria);
+        }
+        return "redirect:/listarProdutos";
+    }
 }
