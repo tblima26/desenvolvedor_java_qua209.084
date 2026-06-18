@@ -1,12 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: main-layout(~{::title}, ~{::main})}">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+    th:replace="~{fragments/layout :: main-layout(~{::title}, ~{::main})}">
+
 <head>
     <title>Javalanches Home Page</title>
 </head>
+
 <body>
     <main>
-        <h1>Javalanches Home Page</h1>
-        <hr>
+        <div class="px-4 py-5 my-5 text-center">
+
+            <img class="d-block mx-auto mb-4" src="img/java-lanches.png" alt="" width="200" height="200">
+            <h1 class="display-5 fw-bold text-body-emphasis">JAVA LANCHES</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">O sistema JAVA LANCHES foi desenvolvido para facilitar o gerenciamento interno da
+                    lanchonete. Com ele, é possível cadastrar usuários, clientes, categorias e lanches de forma simples
+                    e organizada, centralizando as informações e tornando a administração do negócio mais eficiente,
+                    prática e segura.</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a class="btn btn-primary btn-lg px-4 gap-3" href="/novoCliente">
+                        Vamos cadastrar um cliente?
+                    </a>
+                    <a class="btn btn-outline-secondary btn-lg px-4" href="/novaCategoria">
+                        Ou uma Categoria para
+                        começar!
+                    </a>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
+
 </html>
